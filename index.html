@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: url(./images/bg-intro-desktop.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-color: hsl(0, 100%, 74%);
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        @media screen and (max-width:650px) {
+            body {
+                background: url(./images/bg-intro-mobile.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-color: hsl(0, 100%, 74%);
+                font-family: 'Poppins', sans-serif;
+            }
+        }
+        
+        #container {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        @media screen and (max-width:650px) {
+            #container {
+                display: flex;
+                flex-direction: column;
+                margin-left: 30px;
+            }
+        }
+        
+        #text {
+            color: white;
+            text-align: center;
+            align-items: center;
+            margin-top: 15%;
+            padding: 10px 25px 10px 25px;
+            width: 50%;
+        }
+        
+        h1 {
+            font-weight: 700 !important;
+            padding: 20px;
+            width: 470px;
+            text-align: left;
+            margin: auto;
+        }
+        
+        #para {
+            padding: 10px 20px 20px 90px;
+            text-align: left;
+            margin: auto;
+        }
+        
+        @media screen and (max-width:650px) {
+            #text {
+                padding: 10px;
+                width: 100%;
+                padding: 10px 0px 10px 0px;
+            }
+            h1 {
+                padding: 10px;
+                width: 300px;
+                text-align: center;
+                margin: 0px;
+            }
+            #para {
+                margin: 0px;
+                padding: 10px 0px 10px 0px;
+                text-align: center;
+                width: 280px;
+                font-size: 15px;
+            }
+        }
+        
+        #form {
+            padding: 10px;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin-top: 5%;
+        }
+        
+        #heading-form {
+            width: 450px;
+            height: 45px;
+            border-radius: 7px;
+            background-color: hsl(248, 32%, 49%);
+            vertical-align: middle;
+            display: table-cell;
+            box-shadow: -1px 10px 5px 0px rgba(0, 0, 0, 0.21);
+        }
+        
+        #heading-form p {
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #signup-form {
+            width: 450px;
+            height: 380px;
+            border-radius: 7px;
+            background-color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            margin: 20px 0px 10px 0px;
+            box-shadow: -1px 7px 5px 0px rgba(0, 0, 0, 0.21);
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+        input[type="text"] {
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid #000000;
+            margin: 10px 0px;
+        }
+        
+        input[type="email"] {
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid #000000;
+            margin: 10px 0px;
+        }
+        
+        input[type="password"] {
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid #000000;
+            margin: 10px 0px;
+        }
+        
+        button {
+            height: 43px;
+            border-radius: 5px;
+            border: none;
+            margin: 10px 0px;
+            background-color: hsl(154, 59%, 51%);
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: hsl(154, 59%, 71%);
+        }
+        
+        form p {
+            font-size: 10px;
+            color: hsl(246, 25%, 77%);
+        }
+        
+        form a {
+            text-decoration: none;
+            color: hsl(0, 100%, 74%);
+            font-weight: 600;
+        }
+        
+        @media screen and (max-width:650px) {
+            #heading-form {
+                width: 280px;
+                height: 90px;
+                padding: 10px;
+            }
+            #signup-form {
+                width: 280px;
+            }
+        }
+        
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+            margin: 80px auto;
+        }
+        
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+        
+        @media screen and (max-width:650px) {
+            footer {
+                justify-content: center;
+                text-align: center;
+                margin: 0px 0px 5px 2px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="text">
+            <div id="heading">
+                <h1>Learn to code by watching others</h1>
+
+            </div>
+            <div id="para">
+                <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable. </p>
+            </div>
+        </div>
+        <div id="form">
+            <div id="heading-form">
+                <p>Try it free 7 days then $20/mo. thereafter
+                </p>
+            </div>
+            <div id="signup-form">
+                <div id="label">
+                    <form>
+                        <input type="text" name="name" placeholder="FirstName" id="name" required>
+                        <input type="text" name="lastname" placeholder="LastName" id="lastname" required>
+                        <input type="email" placeholder="Email" id="email" required>
+                        <input type="password" placeholder="Password" id="password" required>
+                        <button type="submit" id="button"> CLAIM YOUR FREE TRIAL </button>
+                        <p>By clicking the button, you are agreeing to our<a href="#"> Terms and Services</a></p>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://www.frontendmentor.io/profile/08mishra">Prashant</a>.
+        </p>
+    </footer>
+
+</body>
+
+</html>

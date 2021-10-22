@@ -43,19 +43,20 @@ function checkInputs() {
 }
 
 function setError(input, message) {
-    const signupControl = document.getElementById(input);
-    const small = signupControl.querySelector('small');
+    let signupControl = document.getElementById(input).nodeName;
+
+    const small = signupControl.getElementById('small');
     small.innerHTML = message;
     //signupControl.className += " error";
     signupControl.classList.add(" error");
-    return false;
+
 }
 
 function setSuccess(input) {
     const signupControl = input.parentElement;
     //signupControl.className += " success";
     signupControl.classList.add(" success");
-    return true;
+
 }
 
 function isEmail(email) {
